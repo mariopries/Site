@@ -13,7 +13,7 @@
 		<input type="hidden" name="process" value="1" />
 		<?php echo Flux_Security::csrfGenerate('PurchaseCheckOut', true) ?>
 		<button type="submit" onclick="return confirm('Você deseja continuar com a compra desse(s) item(s)?')">
-			<strong>Comprar Itens</strong>
+			<strong>Comprar / Confimar Itens</strong>
 		</button>
 	</form>
 </p>
@@ -23,13 +23,26 @@
 <table class="vertical-table cart">
 	<?php foreach ($items as $item): ?>
 	<tr>
+		<td class="shop-item-image">
+			<?php if(1==0){ ?>
+				<!-- backup para posterior implementação para ragnarok -->
+				<?php if (($item->shop_item_use_existing && ($image=$this->itemImage($item->shop_item_nameid))) || ($image=$this->shopItemImage($item->shop_item_id))): ?>
+					<img src="<?php echo $image ?>?nocache=<?php echo rand() ?>" />
+				<?php endif ?>
+			<?php } ?>
+			<?php
+				$serverName       = $server->loginAthenaGroup->serverName;
+				$athenaServerName = Flux::config("ConquerServerName");//$this->server->serverName;
+				$dir              = FLUX_DATA_DIR."/itemshop/$serverName/$athenaServerName";
+				$image_view 	  = $dir.'/'.$item->shop_item_nameid.'.png';
+				?>
+				<img src="<?php echo htmlspecialchars($image_view); ?>" />
+
+				
+		</td>
 		<td>
 			<h4>
-				<?php if ($auth->actionAllowed('item', 'view')): ?>
-					<?php echo $this->linkToItem($item->shop_item_nameid, $item->shop_item_name) ?>
-				<?php else: ?>
-					<?php echo htmlspecialchars($item->shop_item_nameid) ?>
-				<?php endif ?>
+				<?php echo htmlspecialchars($item->shop_item_name); ?>
 			</h4>
 			<?php if ($item->shop_item_qty > 1): ?>
 			<p class="shop-item-qty">Quantidade: <span class="qty"><?php echo number_format($item->shop_item_qty) ?></span></p>

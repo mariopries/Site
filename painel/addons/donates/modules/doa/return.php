@@ -83,10 +83,10 @@ if (count($_GET) && isset($_GET['transaction_id'])) {
 							break;
 							
 							case 'conquer':
-								$sql  = "INSERT INTO `".$conquerDatabase."`.`".$conquerCash."`(`account_id`, `key`, `index`, `value`) ";
-								$sql .= "VALUES (?,?,0,?) ON DUPLICATE KEY UPDATE value = value + ?";
+								$sql  = "INSERT INTO {$server->loginDatabase}.`cp_credits` (`account_id`, `balance`, `last_donation_date`, `last_donation_amount`) ";
+								$sql .= "VALUES (?,?,Now(),?) ON DUPLICATE KEY UPDATE balance = balance + ? , last_donation_date = NOW(), last_donation_amount = ?";
 								$sth  = $server->connection->getStatement($sql);
-								$sth->execute(array($account, $donateVar, $credits, $credits));
+								$sth->execute(array($account, $credits, $credits, $credits, $credits));
 							break;
 
 						}						

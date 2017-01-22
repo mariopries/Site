@@ -228,21 +228,21 @@ return array(
 		),
 		'Doações'   => array(
 			//'Comprar'     => array('module' => 'purchase'), // Caso tenha interesse em utilizar a loja de itens do Paypal, descomente esta linha.
-			'Paypal'        => array('module' => 'donate'),
+			//'Paypal'        => array('module' => 'donate'),
 			'Pagseguro'        => array('module' => 'doa'),
 		),
-		'Informações' => array(
+		//'Informações' => array(
 			//'Informações do Server'   => array('module' => 'server', 'action' => 'info'),
 			//'Status do Server'        => array('module' => 'server', 'action' => 'status'),
-			'Horários da GdE'         => array('module' => 'woe'),
+			//'Horários da GdE'         => array('module' => 'woe'),
 			//'Castles'                 => array('module' => 'castle'),
 			//"Quem Está Online"        => array('module' => 'character', 'action' => 'online'),
 			//'Estatísticas de Mapas'   => array('module' => 'character', 'action' => 'mapstats'),
 			//'Ranking'                 => array('module' => 'ranking', 'action' => 'character'),
-		),
+		//),
 		'Database'    => array(
 			'Item Database'    => array('module' => 'item'),
-			'Mob Database'     => array('module' => 'monster'),
+			//'Mob Database'     => array('module' => 'monster'),
 		),
 		'Staff' => array(
 			'brA Logs'          => array('module' => 'logdata'),
@@ -250,7 +250,7 @@ return array(
 			'IP\'s Banidos'     => array('module' => 'ipban'),
 			'Contas'            => array('module' => 'account'),
 			'Personagens'       => array('module' => 'character'),
-			'Clãs'              => array('module' => 'guild'),
+			//'Clãs'              => array('module' => 'guild'),
 			'Enviar E-mail'     => array('module' => 'mail'),
 			//'Reinstalar'        => array('module' => 'install', 'action' => 'reinstall'),
 			//'Leilão'          => array('module' => 'auction'),
@@ -284,7 +284,7 @@ return array(
 			'changepass' => 'Alterar Senha',
 			'changemail' => 'Alterar E-mail',
 			'changesex'  => 'Alterar Gênero',
-			'transfer'   => 'Transferir Créditos',
+			//'transfer'   => 'Transferir Créditos',
 			'xferlog'    => 'Histórico de Transferência',
 			'cart'       => 'Ir as compras',
 			'login'      => 'Login',

@@ -27,7 +27,7 @@ if (count($_POST) && $params->get('process')) {
 	$creditTable = Flux::config('FluxTables.CreditsTable');
 	$deduct      = 0;
 	
-	$sql  = "INSERT INTO {$server->charMapDatabase}.$redeemTable ";
+	$sql  = "INSERT INTO {$server->loginDatabase}.$redeemTable ";
 	$sql .= "(nameid, quantity, cost, account_id, char_id, redeemed, redemption_date, purchase_date, credits_before, credits_after) ";
 	$sql .= "VALUES (?, ?, ?, ?, NULL, 0, NULL, NOW(), ?, ?)";
 	$sth  = $server->connection->getStatement($sql);

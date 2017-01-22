@@ -7,7 +7,7 @@ require_once 'Flux/ItemShop.php';
 
 $id   = $params->get('id');
 $shop = new Flux_ItemShop($server);
-$item = $shop->getItem($id);
+$item = $shop->getItem($id, 'conquer');
 
 if ($item) {
 	$server->cart->add($item);

@@ -13,8 +13,8 @@ $itemID = $params->get('id');
 $category   = null;
 $categories = Flux::config('ShopCategories')->toArray();
 
-$fromTables = array("{$server->charMapDatabase}.item_db", "{$server->charMapDatabase}.item_db2");
-$tableName = "{$server->charMapDatabase}.items";
+$fromTables = array("{$server->gameDatabase}.item_db", "{$server->gameDatabase}.item_db2");
+$tableName = "{$server->gameDatabase}.items";
 $tempTable = new Flux_TemporaryTable($server->connection, $tableName, $fromTables);
 $shopTable = Flux::config('FluxTables.ItemShopTable');
 

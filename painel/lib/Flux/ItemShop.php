@@ -133,17 +133,36 @@ class Flux_ItemShop {
 	/**
 	 *
 	 */
-	public function getItem($shopItemID)
+	public function getItem($shopItemID, $game)
 	{
-		$db = $this->server->charMapDatabase;
 		
-		$fromTables = array("$db.item_db", "$db.item_db2");
-		
-		$temp  = new Flux_TemporaryTable($this->server->connection, "$db.items", $fromTables);
+		$painel = $this->server->loginDatabase;
 		$shop  = Flux::config('FluxTables.ItemShopTable');
-		$col   = "$shop.id AS shop_item_id, $shop.category AS shop_item_category, $shop.cost AS shop_item_cost, $shop.quantity AS shop_item_qty, $shop.use_existing AS shop_item_use_existing, ";
-		$col  .= "$shop.nameid AS shop_item_nameid, $shop.info AS shop_item_info, items.name_japanese AS shop_item_name";
-		$sql   = "SELECT $col FROM $db.$shop LEFT OUTER JOIN $db.items ON items.id = $shop.nameid WHERE $shop.id = ?";
+		
+		switch($game){
+			case 'ragnarok':
+				$db = $this->server->gameDatabase;
+				$fromTables = array("$db.item_db", "$db.item_db2");
+				
+				$temp  = new Flux_TemporaryTable($this->server->connection, "$db.items", $fromTables);
+				$col   = "$shop.id AS shop_item_id, $shop.category AS shop_item_category, $shop.cost AS shop_item_cost, $shop.quantity AS shop_item_qty, $shop.use_existing AS shop_item_use_existing, ";
+				$col  .= "$shop.nameid AS shop_item_nameid, $shop.info AS shop_item_info, items.name_japanese AS shop_item_name";
+		
+			break;
+			
+			case 'conquer':
+				$db   = Flux::config('ConquerDatabase');
+				$fromTables = array("$db.itemtype");
+				
+				$temp  = new Flux_TemporaryTable($this->server->connection, "$db.items", $fromTables);
+				$col   = "$shop.id AS shop_item_id, $shop.category AS shop_item_category, $shop.cost AS shop_item_cost, $shop.quantity AS shop_item_qty, $shop.use_existing AS shop_item_use_existing, ";
+				$col  .= "$shop.nameid AS shop_item_nameid, $shop.info AS shop_item_info, items.Name AS shop_item_name";
+				
+			break;
+			
+		}
+		
+		$sql   = "SELECT $col FROM $painel.$shop LEFT OUTER JOIN $db.items ON items.id = $shop.nameid WHERE $shop.id = ?";
 		$sth   = $this->server->connection->getStatement($sql);
 		
 		if ($sth->execute(array($shopItemID))) {
@@ -157,23 +176,40 @@ class Flux_ItemShop {
 	/**
 	 *
 	 */
-	public function getItems($paginator, $categoryID = null)
+	public function getItems($paginator, $categoryID = null, $game)
 	{
 		$sqlpartial = "";
 		$bind = array();
-		$db   = $this->server->charMapDatabase;
-		
-		$fromTables = array("$db.item_db", "$db.item_db2");
-		
-		$temp  = new Flux_TemporaryTable($this->server->connection, "$db.items", $fromTables);
 		$shop  = Flux::config('FluxTables.ItemShopTable');
-		$col   = "$shop.id AS shop_item_id, $shop.cost AS shop_item_cost, $shop.quantity AS shop_item_qty, $shop.use_existing AS shop_item_use_existing, ";
-		$col  .= "$shop.nameid AS shop_item_nameid, $shop.info AS shop_item_info, items.name_japanese AS shop_item_name";
+		$painel = $this->server->loginDatabase;
+		
+		switch($game){
+			case 'ragnarok':
+				$db   = $this->server->gameDatabase;
+				$fromTables = array("$db.item_db", "$db.item_db2");
+				
+				$temp  = new Flux_TemporaryTable($this->server->connection, "$db.items", $fromTables);
+				$col   = "$shop.id AS shop_item_id, $shop.cost AS shop_item_cost, $shop.quantity AS shop_item_qty, $shop.use_existing AS shop_item_use_existing, ";
+				$col  .= "$shop.nameid AS shop_item_nameid, $shop.info AS shop_item_info, items.name_japanese AS shop_item_name";
+			break;
+			
+			case 'conquer':
+				$db   = Flux::config('ConquerDatabase');
+				$fromTables = array("$db.itemtype");
+				
+				$temp  = new Flux_TemporaryTable($this->server->connection, "$db.items", $fromTables);
+				$col   = "$shop.id AS shop_item_id, $shop.cost AS shop_item_cost, $shop.quantity AS shop_item_qty, $shop.use_existing AS shop_item_use_existing, ";
+				$col  .= "$shop.nameid AS shop_item_nameid, $shop.info AS shop_item_info, items.Name AS shop_item_name";
+
+			break;
+			
+		}
+
 		if (!is_null($categoryID)) {
 			$sqlpartial = " WHERE $shop.category = ?";
 			$bind[]     = $categoryID;
 		}
-		$sql   = $paginator->getSQL("SELECT $col FROM $db.$shop LEFT OUTER JOIN $db.items ON items.id = $shop.nameid $sqlpartial");
+		$sql   = $paginator->getSQL("SELECT $col FROM $painel.$shop LEFT OUTER JOIN $db.items ON items.id = $shop.nameid $sqlpartial");
 		$sth   = $this->server->connection->getStatement($sql);
 		
 		if ($sth->execute($bind)) {

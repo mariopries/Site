@@ -44,7 +44,7 @@
 		<input type="hidden" name="setamount" value="1" />
 		
 		<select name="payment_game">
-		  <option value="ragnarok">Ragnarok</option>
+		  <!-- <option value="ragnarok">Ragnarok</option> -->
 		  <option value="conquer" selected>Conquer</option>
 		</select>
 		
