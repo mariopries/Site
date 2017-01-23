@@ -18,8 +18,7 @@
 				<td colspan="3"></td>
 				<td id="copyright">
 					<p>
-						<strong>Powered by <a href="https://github.com/brAthena/FluxCP">FluxCP</a> and <a href="https://github.com/brAthena/brAthena">brAthena</a>.</strong>
-						&mdash;  Copyright &copy; 2015 Megasantos e Tidus. Version <?php echo htmlspecialchars(Flux::VERSION) ?> &#64;<?php echo Flux::REPOSVERSION ? Flux::REPOSVERSION : '' ?>
+
 					</p>
 				</td>
 				<td></td>
@@ -30,9 +29,7 @@
 				<td colspan="3"></td>
 				<td id="info">
 					<p>
-						Página gerada em <strong><?php echo round(microtime(true) - __START__, 5) ?></strong> segundo(s).
-						Quantidade de queries executadas: <strong><?php echo (int)Flux::$numberOfQueries ?></strong>.
-						<?php if (Flux::config('GzipCompressOutput')): ?>Compressão Gzip: <strong>Habilitada</strong>.<?php endif ?>
+gay
 					</p>
 				</td>
 				<td></td>

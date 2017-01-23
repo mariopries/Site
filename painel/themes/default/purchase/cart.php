@@ -3,7 +3,7 @@
 <p class="cart-info-text">Você possui <span class="cart-item-count"><?php echo number_format(count($items)) ?></span> item(s) no seu carrinho.</p>
 <p class="cart-total-text">Seu subtotal atual é <span class="cart-sub-total"><?php echo number_format($total=$server->cart->getTotal()) ?></span> crédito(s).</p>
 <br />
-<p class="checkout-text"><a href="<?php echo $this->url('purchase', 'checkout') ?>">Finalizar Compra</a></p>
+<p class="checkout-text"><a href="<?php echo $this->url('purchase', 'checkout') ?>">Finalizar Compra Já!</a></p>
 <form action="<?php echo $this->url('purchase', 'remove') ?>" method="post">
 	<table class="vertical-table cart">
 		<?php foreach ($items as $num => $item): ?>

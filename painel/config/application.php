@@ -1,14 +1,14 @@
-<?php
+﻿<?php
 // This is the application configuration file. All values have been set to
 // the default, and should be changed as needed.
 return array(
 	//Conquer
 	'ConquerServerName'      => 'CoBrasil',
-	'ConquerDatabase'        => 'conquer',
+	'ConquerDatabase'        => 'cobrasil',
 	'ConquerCash'         => 'cash',
 	//Ragnarok
 	'ServerAddress'        => 'localhost',              // This value is the hostname:port under which Flux runs. (e.g., example.com or example.com:80)
-	'BaseURI'              => 'site/painel',                 // The base URI is the base web root on which your application lies.
+	'BaseURI'              => 'painel',                 // The base URI is the base web root on which your application lies.
 	'InstallerPassword'    => 'kBMjARB4fb94K8kaabY5Bv8rktQmH8GqGUPaEjNJqDF3rymEg3tX6qBHdPPnzSvC',         // Installer/updater password.
 	'RequireOwnership'     => true,                     // Require the executing user to be owner of the FLUX_ROOT/data/ directory tree? (Better for security)
 	                                                    // WARNING: This will be mostly IGNORED on non-POSIX-compliant OSes (e.g. Windows).
