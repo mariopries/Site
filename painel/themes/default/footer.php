@@ -29,7 +29,7 @@
 				<td colspan="3"></td>
 				<td id="info">
 					<p>
-gay
+Painel de controle CoBrasil & MegaMixRo | 2017
 					</p>
 				</td>
 				<td></td>

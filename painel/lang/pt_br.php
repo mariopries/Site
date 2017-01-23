@@ -545,8 +545,8 @@ return array(
 	
 	// Module: main
 	// - main/index
-	'MainPageHeading'         => 'Flux Control Panel',
-	'MainPageInfo'            => "Se você está vendo esta página, é porque você instalou o Flux Control Panel com sucesso!",
+	'MainPageHeading'         => 'Painel de controle',
+	'MainPageInfo'            => "Para ter acesso ao painel, efetue login em sua conta. Caso não tenha uma ainda, clique em Registrar.",
 	'MainPageInfo2'           => "Você gostaria de mudar esta página? Então, aqui você pode mudar:",
 	'MainPageStep1'           => 'Abra o arquivo "%s" no seu editor de texto.',
 	'MainPageStep2'           => 'E edite o arquivo como você quiser!',
