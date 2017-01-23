@@ -449,8 +449,8 @@ return array(
 	'IpbanEditReasonLabel'    => 'Editar a razão',
 	'IpbanEditButton'         => 'Modificar Banimento de IP',
 	// - ipban/index
-	'IpbanListTitle'          => 'Lista de IP Banidos',
-	'IpbanListHeading'        => 'Lista de IP Banidos',
+	'Title'          => 'Lista de IP Banidos',
+	'Heading'        => 'Lista de IP Banidos',
 	'IpbanBannedIpLabel'      => 'IP Banido',
 	'IpbanBanDateLabel'       => 'Data do Banimento',
 	'IpbanBanReasonLabel'     => 'Razão',
@@ -458,7 +458,7 @@ return array(
 	'IpbanModifyLink'         => 'Modificar',
 	'IpbanRemoveLink'         => 'Remover',
 	'IpbanUnbanButton'        => 'Desbanir Selecionados',
-	'IpbanListNoBans'         => 'Atualmente não há IPs banidos.',
+	'NoBans'         => 'Atualmente não há IPs banidos.',
 	// - ipban/remove
 	'IpbanRemoveTitle'        => 'Remover Banimento de IP',
 	'IpbanEnterRemoveReason'  => 'Por favor, digite uma razão para a remoção do Banimento de IP.',

@@ -150,9 +150,9 @@
 						<tr>
 							<td bgcolor="#f5f5f5"></td>
 							<td bgcolor="#f5f5f5">
-								<?php if (Flux::config('DebugMode') && @gethostbyname(Flux::config('ServerAddress')) == '127.0.0.1'): ?>
+								<!--<?php if (Flux::config('DebugMode') && @gethostbyname(Flux::config('ServerAddress')) == '127.0.0.1'): ?>
 									<p class="notice">Por favor, mude a diretiva <strong>ServerAddress</strong> no arquivo de configuração <strong>application</strong> para o endereço real do seu servidor (Ex: meuservidor.com.br).</p>
-								<?php endif ?>
+								<?php endif ?>-->
 								
 								<!-- Messages -->
 								<?php if ($message=$session->getMessage()): ?>
