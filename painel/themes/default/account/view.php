@@ -1,4 +1,5 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
+<br />
 <h2><?php echo htmlspecialchars(Flux::message('AccountViewHeading')) ?></h2>
 <?php if (!empty($errorMessage)): ?>
 <p class="red"><?php echo htmlspecialchars($errorMessage) ?></p>
@@ -175,7 +176,7 @@
 	<?php endforeach ?>
 </table>
 <?php endif ?>
-
+<br />
 <?php foreach ($characters as $serverName => $chars): $zeny = 0; ?>
 	<h3><?php echo htmlspecialchars(sprintf(Flux::message('AccountViewCharSubHead'), $serverName)) ?></h3>
 	<?php if ($chars): ?>
@@ -244,7 +245,7 @@
 	<p><?php echo htmlspecialchars(sprintf(Flux::message('AccountViewNoChars'), $serverName)) ?></p>
 	<?php endif ?>
 <?php endforeach ?>
-
+<br />
 <h3><?php echo htmlspecialchars(sprintf(Flux::message('AccountViewStorage'), $account->userid)) ?></h3>
 <?php if ($items): ?>
 	<p><?php echo htmlspecialchars(sprintf(Flux::message('AccountViewStorageCount'), $account->userid, count($items))) ?></p>

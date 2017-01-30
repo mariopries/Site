@@ -227,10 +227,15 @@ return array(
 			'Sair da Conta'   => array('module' => 'account', 'action' => 'logout'),
 		),
 		'Doações'   => array(
-			//'Comprar'     => array('module' => 'purchase'), // Caso tenha interesse em utilizar a loja de itens do Paypal, descomente esta linha.
+
 			//'Paypal'        => array('module' => 'donate'),
 			'Pagseguro'        => array('module' => 'doa'),
 		),
+		'Loja Virtual'   => array(
+
+					'Comprar'     => array('module' => 'purchase'), // Caso tenha interesse em utilizar a loja de itens do Paypal, descomente esta linha.
+		),
+
 		//'Informações' => array(
 			//'Informações do Server'   => array('module' => 'server', 'action' => 'info'),
 			//'Status do Server'        => array('module' => 'server', 'action' => 'status'),
@@ -241,7 +246,7 @@ return array(
 			//'Ranking'                 => array('module' => 'ranking', 'action' => 'character'),
 		//),
 		'Database'    => array(
-			'Item Database'    => array('module' => 'item'),
+			//'Item Database'    => array('module' => 'item'),
 			//'Mob Database'     => array('module' => 'monster'),
 		),
 		'Staff' => array(
@@ -272,8 +277,8 @@ return array(
 			'staffsettings'	=> 'Configurações',
 		),
 		'history' => array(
-			'gamelogin'  => 'Logins no Jogo',
-			'cplogin'    => 'Logins no CP',
+			//'gamelogin'  => 'Logins no Jogo',
+			'cplogin'    => 'Logins no Painel',
 			'emailchange'=> 'Alterações de E-Mail',
 			'passchange' => 'Alterações de Senha',
 			'passreset'  => 'Redefinições de Senha'
@@ -283,9 +288,9 @@ return array(
 			'view'       => 'Ver Conta',
 			'changepass' => 'Alterar Senha',
 			'changemail' => 'Alterar E-mail',
-			'changesex'  => 'Alterar Gênero',
+			//'changesex'  => 'Alterar Gênero',
 			//'transfer'   => 'Transferir Créditos',
-			'xferlog'    => 'Histórico de Transferência',
+			//'xferlog'    => 'Histórico de Transferência',
 			'cart'       => 'Ir as compras',
 			'login'      => 'Login',
 			'create'     => 'Registrar',
@@ -325,10 +330,10 @@ return array(
 		),
 		'purchase' => array(
 			'index'    => 'Loja',
-			'cart'     => 'Ir Para o Carrinho',
+			'cart'     => 'Meu carrinho',
 			'checkout' => 'Finalizar',
-			'clear'    => 'Esvaziar Carrinho',
-			'pending'  => 'Recompensas Pendentes'
+			//'clear'    => 'Esvaziar Carrinho',
+			//'pending'  => 'Recompensas Pendentes'
 		),
 		'donate' => array(
 			'index'   => 'Fazer Uma Doação',

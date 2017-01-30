@@ -29,7 +29,7 @@ return array(
 	'AccountIdLabel'          => 'ID da Conta',
 	'AccountGroupIDLabel'     => 'Level do Grupo',
 	'AccountStateLabel'       => 'Status da Conta',
-	'CreditBalanceLabel'      => 'Balanço de Crédito',
+	'CreditBalanceLabel'      => 'Gift Points',
 	'UsernameLabel'           => 'Usuário',
 	'PasswordLabel'           => 'Senha',
 	'EmailAddressLabel'       => 'E-mail',
@@ -546,7 +546,7 @@ return array(
 	// Module: main
 	// - main/index
 	'MainPageHeading'         => 'Painel de controle',
-	'MainPageInfo'            => "Para ter acesso ao painel, efetue login em sua conta. Caso não tenha uma ainda, clique em Registrar.",
+	'MainPageInfo'            => "Seja bem vindo ao nosso painel. Por favor, escolha uma das opções do menu ao lado.",
 	'MainPageInfo2'           => "Você gostaria de mudar esta página? Então, aqui você pode mudar:",
 	'MainPageStep1'           => 'Abra o arquivo "%s" no seu editor de texto.',
 	'MainPageStep2'           => 'E edite o arquivo como você quiser!',

@@ -1,4 +1,5 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
+<br />
 <h2>Contas</h2>
 <p class="toggler"><a href="javascript:toggleSearchForm()"><?php echo htmlspecialchars(Flux::message('SearchLabel')) ?></a></p>
 <form action="<?php echo $this->url ?>" method="get" class="search-form">

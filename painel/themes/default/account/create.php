@@ -1,4 +1,5 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
+<br />
 <h2><?php echo htmlspecialchars(Flux::message('AccountCreateHeading')) ?></h2>
 <p><?php printf(htmlspecialchars(Flux::message('AccountCreateInfo')), '<a href="'.$this->url('service', 'tos').'">'.Flux::message('AccountCreateTerms').'</a>') ?></p>
 <?php if (Flux::config('RequireEmailConfirm')): ?>

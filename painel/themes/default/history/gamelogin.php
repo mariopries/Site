@@ -1,4 +1,5 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
+<br />
 <h2><?php echo htmlspecialchars(Flux::message('HistoryGameLoginHeading')) ?></h2>
 <?php if ($logins): ?>
 <?php echo $paginator->infoText() ?>

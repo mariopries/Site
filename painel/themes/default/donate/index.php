@@ -4,7 +4,7 @@
 	<?php if (!empty($errorMessage)): ?>
 		<p class="red"><?php echo htmlspecialchars($errorMessage) ?></p>
 	<?php endif ?>
-	
+	<br />
 	<p>Ao fazer uma doação, você está ajudando nos custos de <em>execução</em> desde servidor e na <em>manutenção</em> do mesmo. Em troca, você é recompensado com <span class="keyword">créditos de doação</span> que você pode utilizar para comprar coisas da nossa <a href="<?php echo $this->url('purchase') ?>">loja</a>.</p>
 	<h3>Você está pronto para doar?</h3>
 	<p>Todas as doações feitas para nós são recebidas pelo PayPal, mas não se preocupe! Se você não tiver uma conta no PayPal, você ainda pode usar o seu cartão de crédito para fazer uma doação!</p>
@@ -42,7 +42,7 @@
 			</tr>
 		</table>
 	</div>
-		
+		Digite a quantidade que você quer doar:
 	<?php if (!$donationAmount): ?>
 	<form action="<?php echo $this->url ?>" method="post">
 		<?php echo $this->moduleActionFormInputs($params->get('module')) ?>

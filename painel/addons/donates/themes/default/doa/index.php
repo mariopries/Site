@@ -1,16 +1,17 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Doação PagSeguro</h2>
+<br /><h2>Doação PagSeguro</h2>
 <?php if (!Flux::config('PagSeguroLock') || $session->account->group_id > 20): ?>
 	<?php if (!empty($errorMessage)): ?>
 		<p class="red"><?php echo htmlspecialchars($errorMessage) ?></p>
 	<?php endif ?>
 	
-	<p>Ao fazer uma doação, você está ajudando nos custos de <em>execução</em> desde servidor e na <em>manutenção</em> do mesmo. Em troca, você é recompensado com <span class="keyword"><?php echo Flux::config('PagSeguroCoin') ?></span> que você pode utilizar para comprar itens
-	<?php echo (Flux::config('PagSeguroFlux') ? 'da nossa <a href="'. $this->url('purchase').'">loja</a> de' : 'em nosso NPC de') ?> <?php echo Flux::config('PagSeguroCoin') ?> .</p>
+	<p>Ao fazer uma doação, você está ajudando nos custos de <em>execução</em> deste servidor e na <em>manutenção</em> do mesmo. Em troca, você é recompensado com <span class="keyword"><?php echo Flux::config('PagSeguroCoin') ?></span> que você pode utilizar para comprar itens
+	<?php echo (Flux::config('PagSeguroFlux') ? 'da nossa <a href="'. $this->url('purchase').'">loja</a> de' : 'em nosso NPC de') ?> <?php echo Flux::config('PagSeguroCoin') ?>.</p>
 	<?php if (Flux::config('Promotion')):?>
 		<h3><span class="keyword"> Aproveite estamos com uma promoção onde <?php echo ((Flux::config('InitPromo') > 0) ? 'a partir de '.$this->formatCurrency(Flux::config('InitPromo')).' R$ ' : ' ').'você recebe mais '. Flux::config('Promotion').'% de créditos nas doações.' ?></span></h3>
 	<?php endif ?>
-	<h3>Você está pronto para doar?</h3>
+    <br />
+	<h3>Você está pronto para doar?</h3><br />
 	<p>Aqui as doações são recebidas através do PagSeguro, onde você pode pagar de diversas maneiras.</p>
 		
 	<?php
@@ -24,7 +25,7 @@
 	}
 	?>
 
-	<div class="generic-form-div" style="margin-bottom: 10px">
+	<div class="generic-form-div" style="margin-bottom: 10px; margin-top:20px;">
 		<table class="generic-form-table">
 			<tr>
 				<th><label>Taxa de Câmbio:</label></th>
@@ -39,21 +40,19 @@
 	</div>
 		
 	<?php if (!$donationAmount): ?>
+    <div style="margin-left:0px; margin-top:20px;">
 	<form action="<?php echo $this->url ?>" method="post">
 		<?php echo $this->moduleActionFormInputs($params->get('module')) ?>
 		<input type="hidden" name="setamount" value="1" />
-		
-		<select name="payment_game">
+		<p><font size="2">Escolha qual o jogo que você quer doar:</font></p>
+		<select style="margin-left:5px;" name="payment_game">
 		  <!-- <option value="ragnarok">Ragnarok</option> -->
-		  <option value="conquer" selected>Conquer</option>
+		  <option value="conquer" selected>CoBrasil</option>
 		</select>
-		
-
-
 		<p class="enter-donation-amount">
 			<label>
-				Digite a quantidade que você quer doar:
-				<input class="money-input" type="text" name="amount"
+				<p><font size="2">Digite a quantidade que você quer doar:</font></p>
+				<input style="margin-left:5px;" class="money-input" type="text" name="amount"
 					value="<?php echo htmlspecialchars($params->get('amount')) ?>"
 					size="<?php echo (strlen((string)+Flux::config('rate')) * 2) + 2 ?>" /> R$
 			</label>
@@ -65,8 +64,9 @@
 				<?php echo Flux::config('PagSeguroCoin') ?>
 			</label>
 		</p>
-		<input type="submit" value="Confirmar Doação" class="submit_button" />
+		<input style="margin-left:5px; margin-top:25px;" type="submit" value="Confirmar Doação" class="submit_button" />
 	</form>
+    </div>
 	<?php else: ?>
 	<p>Quando você estiver pronto para doar, clique no botão “Doar com PagSeguro” para proceder com a sua transação.</p>
 		

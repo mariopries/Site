@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^painel.cobrasil.net
+RewriteRule ^(.*)$ http://cobrasil.ddns.net/painel/$1 [L,NC,QSA]
+
+
+
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} painel.cobrasil.net$
+RewriteCond %{REQUEST_URI} !^/painel/
+RewriteRule ^(.*)$ /painel/$1 [L] 

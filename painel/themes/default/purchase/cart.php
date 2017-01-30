@@ -1,9 +1,9 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Ver Carrinho</h2>
+<br />
+<h2>Meu Carrinho</h2>
 <p class="cart-info-text">Você possui <span class="cart-item-count"><?php echo number_format(count($items)) ?></span> item(s) no seu carrinho.</p>
 <p class="cart-total-text">Seu subtotal atual é <span class="cart-sub-total"><?php echo number_format($total=$server->cart->getTotal()) ?></span> crédito(s).</p>
 <br />
-<p class="checkout-text"><a href="<?php echo $this->url('purchase', 'checkout') ?>">Finalizar Compra Já!</a></p>
 <form action="<?php echo $this->url('purchase', 'remove') ?>" method="post">
 	<table class="vertical-table cart">
 		<?php foreach ($items as $num => $item): ?>
@@ -45,12 +45,22 @@
 		</tr>
 		<?php endforeach ?>
 	</table>
-	<p class="remove-from-cart">
-		<input type="submit" value="Remover Itens Selecionados do Carrinho" />
+    <table border="0" style="margin-top:30px;" width="100%">
+    <tr>
+    <td width="75%">
+    <p><a style=" color:#CCC; text-transform:uppercase; font:Verdana, Geneva, sans-serif; border: #393 solid 10px; border-radius: 3px; background-color:#393;" href="<?php echo $this->url('purchase', 'checkout') ?>">Finalizar Compra Já</a></p>
+    </td>
+    <td>
+    	<p class="remove-from-cart">
+		<input style=" font-size:12px; margin-top:-10px; color:#CCC; text-transform:uppercase; font:Verdana, Geneva, sans-serif; border:#366 solid 10px; border-radius: 3px; background-color:#366;" type="submit" value="Remover Itens Selecionados" />
 	</p>
-</form>
-<form action="<?php echo $this->url('purchase', 'clear') ?>" method="post">
-	<p class="remove-from-cart">
-		<input type="submit" value="Empty Out Your Cart" />
-	</p>
-</form>
+    </td>
+    
+    <td>
+    <p class="remove-from-cart"><a style=" color:#CCC; text-transform:uppercase; font:Verdana, Geneva, sans-serif; border:#366 solid 10px; border-radius: 3px; background-color:#366;" href="<?php echo $this->url('purchase', 'clear') ?>">Esvaziar carrinho</a></p>
+    </td>
+    </tr>
+    </table>
+        
+
+
