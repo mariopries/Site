@@ -1,6 +1,6 @@
 ﻿<?php if (!defined('FLUX_ROOT')) exit; ?>
 <h2>Comprar</h2>
-<p>Itens nessa loja são comprados usando <span class="keyword">Gift Points</span> e não dinheiro de verdade.  Gift Points são dados para players que <a href="<?php echo $this->url('donate') ?>">fazem uma doação para o nosso servidor</a>, nos ajudando a cobrir com os custos de hospedagem e manutenção do servidor.</p>
+<p>Itens nessa loja são comprados usando <span class="keyword">Gift Points</span> e não dinheiro de verdade.  Gift Points são dados para players que <a href="<?php echo $this->url('doa') ?>">fazem uma doação para o nosso servidor</a>, nos ajudando a cobrir com os custos de hospedagem e manutenção do servidor.</p>
 <h2>Loja de Itens <span class="shop-server-name"><?php echo htmlspecialchars(Flux::config("ConquerServerName")) ?></span></h2>
 <p class="action">
 	<a href="<?php echo $this->url('purchase', 'index') ?>"<?php if (is_null($category)) echo ' class="current-shop-category"' ?>>

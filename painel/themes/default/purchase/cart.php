@@ -47,7 +47,7 @@
 	</table>
     <table border="0" style="margin-top:30px;" width="100%">
     <tr>
-    <td width="75%">
+    <td width="35%">
     <p><a style=" color:#CCC; text-transform:uppercase; font:Verdana, Geneva, sans-serif; border: #393 solid 10px; border-radius: 3px; background-color:#393;" href="<?php echo $this->url('purchase', 'checkout') ?>">Finalizar Compra Já</a></p>
     </td>
     <td>
@@ -56,7 +56,7 @@
 	</p>
     </td>
     
-    <td>
+    <td width="26%">
     <p class="remove-from-cart"><a style=" color:#CCC; text-transform:uppercase; font:Verdana, Geneva, sans-serif; border:#366 solid 10px; border-radius: 3px; background-color:#366;" href="<?php echo $this->url('purchase', 'clear') ?>">Esvaziar carrinho</a></p>
     </td>
     </tr>

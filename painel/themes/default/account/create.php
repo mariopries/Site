@@ -103,7 +103,8 @@
 			<td></td>
 			<td>
 				<div style="margin-bottom: 5px">
-					<?php printf(htmlspecialchars(Flux::message('AccountCreateInfo2')), '<a href="'.$this->url('service', 'tos').'">'.Flux::message('AccountCreateTerms').'</a>') ?>
+                <?php printf(htmlspecialchars(Flux::message('AccountCreateInfo2')), '<a target="_blank" href="http://www.cobrasil.net/regras-do-servidor">'.Flux::message('AccountCreateTerms').'</a>') ?>
+					<!-- original <?php printf(htmlspecialchars(Flux::message('AccountCreateInfo2')), '<a href="'.$this->url('service', 'tos').'">'.Flux::message('AccountCreateTerms').'</a>') ?> -->
 				</div>
 				<div>
 					<button type="submit"><strong><?php echo htmlspecialchars(Flux::message('AccountCreateButton')) ?></strong></button>
