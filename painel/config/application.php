@@ -99,9 +99,9 @@ return array(
 	'MoneyThousandsSymbol' => ',',                      // (Visual) Thousandths place separator (a period in European currencies).
 	'MoneyDecimalSymbol'   => '.',                      // (Visual) Decimal separator (a comma in European currencies).
 	'AcceptDonations'      => true,                     // Whether or not to accept donations.
-	'PagSeguroSandbox'	   => true,						// false = produção , true = sandbox(testes)
-	'PagSeguroEmail'	   => 'douglasdossantos22@gmail.com',	 	// email cadastrado no pagseguro
-	'PagSeguroToken'	   => '',									// token producao
+	'PagSeguroSandbox'	   => false,					// false = produção , true = sandbox(testes)
+	'PagSeguroEmail'	   => 'mario.pries@uol.com.br',	// email cadastrado no pagseguro
+	'PagSeguroToken'	   => '1222156CCDFF4350B6A13969164B98FB',	// token producao
 	'PagSeguroTokenSandbox'=> 'A29C739852A14811AE7186CE181697C6', 	// token sandbox
 	'PayPalIpnUrl'         => 'www.paypal.com', // The URL for PayPal's IPN responses (www.paypal.com for live and www.sandbox.paypal.com for testing)
 	'PayPalBusinessEmail'  => 'admin@localhost',        // Enter the e-mail under which you have registered your business account.
