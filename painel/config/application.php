@@ -7,7 +7,7 @@ return array(
 	'ConquerDatabase'        => 'cobrasil',
 	'ConquerCash'         => 'cash',
 	//Ragnarok
-	'ServerAddress'        => 'localhost',              // This value is the hostname:port under which Flux runs. (e.g., example.com or example.com:80)
+	'ServerAddress'        => 'painel.cobrasil.net',              // This value is the hostname:port under which Flux runs. (e.g., example.com or example.com:80)
 	'BaseURI'              => 'painel',                 // The base URI is the base web root on which your application lies.
 	'InstallerPassword'    => 'kBMjARB4fb94K8kaabY5Bv8rktQmH8GqGUPaEjNJqDF3rymEg3tX6qBHdPPnzSvC',         // Installer/updater password.
 	'RequireOwnership'     => true,                     // Require the executing user to be owner of the FLUX_ROOT/data/ directory tree? (Better for security)
@@ -28,8 +28,8 @@ return array(
 	'SessionCookieExpire'  => 48,                       // Duration in hours.
 	'AdminMenuGroupLevel'  => AccountLevel::LOWGM,      // The starting group ID for which module actions are moved into the admin menu for display.
 	'DateDefaultTimezone'  => 'America/Sao_Paulo',      // The default timezone, consult the PHP manual for valid timezones: http://php.net/timezones (null for defaut system TZ)
-	'DateFormat'           => 'Y-m-d',                  // Default DATE format to be displayed in pages.
-	'DateTimeFormat'       => 'Y-m-d H:i:s',            // Default DATETIME format to be displayed in pages.
+	'DateFormat'           => 'D-m-y',                  // Default DATE format to be displayed in pages.
+	'DateTimeFormat'       => 'D-m-y H:i:s',            // Default DATETIME format to be displayed in pages.
 	'ShowSinglePage'       => true,                     // Whether or not to show the page numbers even if there's only one page.
 	'ResultsPerPage'       => 20,                       // The number of results to display in a paged set, per page.
 	'PagesToShow'          => 10,                       // The number of page numbers to display at once.
@@ -60,14 +60,14 @@ return array(
 	'RequireEmailConfirm'  => false,                    // Require e-mail confirmation during registration.
 	'RequireChangeConfirm' => false,                    // Require confirmation when changing e-mail addresses.
 	'EmailConfirmExpire'   => 48,                       // E-mail confirmations expire hours. Unconfirmed accounts will expire after this period of time.
-	'MailerFromAddress'    => 'jogosprivadosbr@gmail.com',// The e-mail address displayed in the From field.
+	'MailerFromAddress'    => 'no-reply@cobrasil.net',// The e-mail address displayed in the From field.
 	'MailerFromName'       => 'Contato',             	// The name displayed with the From e-mail address.
 	'MailerUseSMTP'        => true,                    // Whether or not to use a separate SMTP server for sending mail.
 	'MailerSMTPUseSSL'     => false,                    // Whether or not mailer should connect using SSL (yes for GMail).
 	'MailerSMTPUseTLS'     => true,                    // Same as above SSL setting, but for TLS.  This setting will override the SSL setting.
 	'MailerSMTPPort'       => 587,                     // When MailerUseSMTP is true: SMTP server port (mailer will default to 25).
-	'MailerSMTPHosts'      => 'smtp.gmail.com',                     // When MailerUseSMTP is true: A string host or array of hosts (e.g., 'host1' or array('host1', 'backuphost')).
-	'MailerSMTPUsername'   => 'jogosprivadosbr@gmail.com',                     // When MailerUseSMTP is true: Authorized username for SMTP server.
+	'MailerSMTPHosts'      => 'mail.cobrasil.net',                     // When MailerUseSMTP is true: A string host or array of hosts (e.g., 'host1' or array('host1', 'backuphost')).
+	'MailerSMTPUsername'   => 'no-reply@cobrasil.net',                     // When MailerUseSMTP is true: Authorized username for SMTP server.
 	'MailerSMTPPassword'   => 'jUDDkzDCmruaTQpW6CgaSW8Y8sj6eyeQR6UACsXax7PrM4DuR2cyNhtbnpxpx2FC',                     // When MailerUseSMTP is true: Authorized password for SMTP server (for above user).
 	'ServerStatusCache'    => 2,                        // Store a cached server status and refresh every X minutes.  Default: 2 minutes (value is measured in minutes).
 	'ServerStatusTimeout'  => 2,                        // For each server, spend X amount of seconds to determine whether it's up or not.
@@ -99,9 +99,9 @@ return array(
 	'MoneyThousandsSymbol' => ',',                      // (Visual) Thousandths place separator (a period in European currencies).
 	'MoneyDecimalSymbol'   => '.',                      // (Visual) Decimal separator (a comma in European currencies).
 	'AcceptDonations'      => true,                     // Whether or not to accept donations.
-	'PagSeguroSandbox'	   => false,					// false = produção , true = sandbox(testes)
+	'PagSeguroSandbox'	   => false,						// false = produção , true = sandbox(testes)
 	'PagSeguroEmail'	   => 'mario.pries@uol.com.br',	// email cadastrado no pagseguro
-	'PagSeguroToken'	   => '1222156CCDFF4350B6A13969164B98FB',	// token producao
+	'PagSeguroToken'	   => '327A8E51D61441FABE3EC1A4A0AF36EF', // token producao
 	'PagSeguroTokenSandbox'=> 'A29C739852A14811AE7186CE181697C6', 	// token sandbox
 	'PayPalIpnUrl'         => 'www.paypal.com', // The URL for PayPal's IPN responses (www.paypal.com for live and www.sandbox.paypal.com for testing)
 	'PayPalBusinessEmail'  => 'admin@localhost',        // Enter the e-mail under which you have registered your business account.

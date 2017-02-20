@@ -3,7 +3,6 @@
 
 $this->loginRequired();
 $title = 'Retorno da Transação';
-
 require_once Flux::config('PagSeguroLib');
 $donateTable = Flux::config('FluxTables.DonateTable');
 $tableBan    = Flux::config('FluxTables.AccountBanTable');

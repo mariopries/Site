@@ -10,7 +10,7 @@ $PagSeguroResources['environment']['sandbox']['webserviceUrl'] 		= "https://ws.s
 // Payment service
 $PagSeguroResources['paymentService'] = Array();
 $PagSeguroResources['paymentService']['servicePath'] = "/v2/checkout";
-$PagSeguroResources['paymentService']['checkoutUrl'] = "https://pagseguro.uol.com.br/v2/checkout/payment.html"; 			// production
+$PagSeguroResources['paymentService']['checkoutUrl'] = "https://pagseguro.uol.com.br/checkout/v2/payment.html"; 			// production
 //$PagSeguroResources['paymentService']['checkoutUrl'] = "https://sandbox.pagseguro.uol.com.br/v2/checkout/payment.html";		// sandbox
 $PagSeguroResources['paymentService']['serviceTimeout'] = 20;
 
